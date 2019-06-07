@@ -1,3 +1,4 @@
+echo "test"
 language: bash
 matrix:
   include:
