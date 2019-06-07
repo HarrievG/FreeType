@@ -4,10 +4,12 @@ env:
   - CMAKE_PATH="/c/Program Files/CMake/bin"
 script: 
   - choco install pkgconfiglite
-  - choco install ninja
+  - git clone https://github.com/Microsoft/vcpkg && cd vcPKG
+  - .\bootstrap-vcpkg.bat
+  #- choco install ninja
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
-  - cmake .. 
+  - cmake Debug . 
   - dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
