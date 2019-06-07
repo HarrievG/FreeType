@@ -9,7 +9,7 @@ script:
   #- choco install ninja
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
-  - cmake Debug . 
+  - cmake .. 
   - dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
