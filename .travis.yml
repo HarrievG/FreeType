@@ -6,10 +6,10 @@ script:
   - choco install pkgconfiglite
   - git clone https://github.com/Microsoft/vcpkg ../vcpkg -v
   - ../vcpkg/bootstrap-vcpkg.bat
-  - vcpkg install ZLIB
-  - vcpkg install harfbuzz
-  - vcpkg install PNG 
-  - vcpkg install BZip2 
+  - ../toolsrc/msbuild.x86.release/vcpkg.exe install ZLIB
+  - ../toolsrc/msbuild.x86.release/vcpkg.exe installl harfbuzz
+  - ../toolsrc/msbuild.x86.release/vcpkg.exe install PNG 
+  - ../toolsrc/msbuild.x86.release/vcpkg.exe install BZip2 
   #- choco install ninja
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
