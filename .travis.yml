@@ -1,4 +1,3 @@
-echo "test"
 language: cpp
 - os: windows
 env:
