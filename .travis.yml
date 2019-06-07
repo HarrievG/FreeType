@@ -1,9 +1,9 @@
 language: cpp
-- os: windows
+os: windows
 env:
-- CMAKE_PATH="/c/Program Files/CMake/bin"
+  - CMAKE_PATH="/c/Program Files/CMake/bin"
 script: 
-- export PATH=$CMAKE_PATH:$PATH
-- mkdir build && cd build
-- cmake .. 
-- cmake --build . 
+  - export PATH=$CMAKE_PATH:$PATH
+  - mkdir build && cd build
+  - cmake .. 
+  - cmake --build . 
