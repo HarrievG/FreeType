@@ -6,4 +6,5 @@ script:
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
   - cmake .. 
-  - cmake --build . 
+  - cmake -DCMAKE_BUILD_TYPE=Debug . 
+  - cmake -DCMAKE_BUILD_TYPE=Release . 
