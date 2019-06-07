@@ -5,6 +5,8 @@ env:
 script: 
   - choco install pkgconfiglite
   - choco install ninja
+  - choco install peazip
+  - choco update peazip
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
   - cmake .. 
