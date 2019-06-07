@@ -3,7 +3,7 @@ os: windows
 env:
   - CMAKE_PATH="/c/Program Files/CMake/bin"
 script: 
-  - choco install pkzip
+  - choco install pkgconfiglite
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
   - cmake .. 
