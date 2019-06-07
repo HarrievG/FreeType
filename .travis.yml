@@ -3,9 +3,13 @@ os: windows
 env:
   - CMAKE_PATH="/c/Program Files/CMake/bin"
 script: 
-  #- choco install pkgconfiglite
-  - git clone https://github.com/Microsoft/vcpkg HarrievG/vcpkg -v
-  - HarrievG/vcpkg/bootstrap-vcpkg.bat
+  - choco install pkgconfiglite
+  - git clone https://github.com/Microsoft/vcpkg ../vcpkg -v
+  - /vcpkg/bootstrap-vcpkg.bat
+  - vcpkg install ZLIB
+  - vcpkg install harfbuzz
+  - vcpkg install PNG 
+  - vcpkg install BZip2 
   #- choco install ninja
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
