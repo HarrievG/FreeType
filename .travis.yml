@@ -14,8 +14,8 @@ script:
   #- choco install ninja
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
-  - cmake .. --config Release
-  - cmake --build . --target FreeType --config Release
+  - cmake .. 
+  - cmake --build . --target FreeType
   #- cmake --build . --target FreeType --config Debug
   #- dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
