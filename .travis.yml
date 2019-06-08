@@ -16,7 +16,7 @@ script:
   - mkdir build && cd build
   - cmake ..
   - cmake --build . --target FreeType --config Release
-  - cmake --build . --target FreeType --config Debug
+  #- cmake --build . --target FreeType --config Debug
   #- dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
