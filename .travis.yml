@@ -19,11 +19,13 @@ script:
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
 deploy:
-	provider: script
-	script	grunt gh-pages
-	skip_cleanup: true
-	github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
-	keep_history: false
-	on:
+  provider: script
+  script:	grunt gh-pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN 
+  keep_history: false
+  on:
     tags: false
     repo: HarrievG/FreeType
+    
+    
