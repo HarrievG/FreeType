@@ -14,7 +14,7 @@ script:
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
   - cmake ..
-  - make 
+  - cmake --build . --target FreeType --config Release 
   #- dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
