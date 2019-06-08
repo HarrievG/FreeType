@@ -2,6 +2,7 @@ language: cpp
 os: windows
 env:
   - CMAKE_PATH="/c/Program Files/CMake/bin"
+cache: ccache
 script: 
   #- choco install pkgconfiglite
   #- git clone https://github.com/Microsoft/vcpkg ../vcpkg -v
@@ -18,14 +19,4 @@ script:
   #- dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
-deploy:
-  provider: pages
-  #script:	grunt gh-pages
-  skip_cleanup: true
-  github_token: $GH_TOKEN 
-  keep_history: false
-  on:
-    tags: false
-    repo: HarrievG/FreeType
-    
     
