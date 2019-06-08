@@ -2,7 +2,6 @@ language: cpp
 os: windows
 env:
   - CMAKE_PATH="/c/Program Files/CMake/bin"
-#cache: ccache
 script: 
   #- choco install pkgconfiglite
   #- git clone https://github.com/Microsoft/vcpkg ../vcpkg -v
@@ -14,9 +13,8 @@ script:
   #- choco install ninja
   - export PATH=$CMAKE_PATH:$PATH
   - mkdir build && cd build
-  - cmake .. 
-  - cmake --build . --target FreeType --config Debug
+  - cmake ..
+  - cmake --build . --target FreeType --config Release 
   #- dir
   #- cmake -DCMAKE_BUILD_TYPE=Debug . 
   #- cmake -DCMAKE_BUILD_TYPE=Release . 
-    
