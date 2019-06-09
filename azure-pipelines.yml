@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
-  configuration: $(buildConfiguration)
+  configuration: 'release'
 
 steps:
 - task: CMake@1
@@ -18,8 +18,8 @@ steps:
     cmakeArgs: ..
 - task: CMake@1
   inputs:
-    configuration: $(buildConfiguration)
-    cmakeArgs: '--build . --target FreeType --config $(buildConfiguration)'
+    configuration: $(BuildConfiguration)
+    cmakeArgs: '--build . --target FreeType --config $(BuildConfiguration)'
   
 #- script: |
 #    echo Add other tasks to build, test, and deploy your project.
