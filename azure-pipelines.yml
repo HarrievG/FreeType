@@ -10,13 +10,9 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-#- script: mkdir build && cd build
-#  displayName: 'Creating and entering Build Directory'
-- script: cmake ..
-  displayName: 'Running cmake to generate build conifg'
-- script: cmake --build . --target FreeType --config Release
-  displayName: 'Building FreeType Release'
-
+- task: CMake@1
+  inputs:
+    cmakeArgs: ..
   
 #- script: |
 #    echo Add other tasks to build, test, and deploy your project.
