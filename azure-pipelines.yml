@@ -18,6 +18,7 @@ steps:
     cmakeArgs: ..
 - task: CMake@1
   inputs:
+    configuration: $(buildConfiguration)
     cmakeArgs: '--build . --target FreeType --config $(buildConfiguration)'
   
 #- script: |
