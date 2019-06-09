@@ -10,8 +10,8 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-- script: mkdir build && cd build
-  displayName: 'Creating and entering Build Directory'
+#- script: mkdir build && cd build
+#  displayName: 'Creating and entering Build Directory'
 - script: cmake ..
   displayName: 'Running cmake to generate build conifg'
 - script: cmake --build . --target FreeType --config Release
