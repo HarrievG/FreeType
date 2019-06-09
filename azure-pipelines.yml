@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-2019'
 
 variables:
-  configuration: 'release'
+  BuildConfiguration: 'Release'
 
 steps:
 - task: CMake@1
