@@ -13,7 +13,7 @@ steps:
 - task: CMake@1
   inputs:
     cmakeArgs: ..
-- task: CMakeBuild@2
+- task: CMake@2
   inputs:
     cmakeArgs: --build . --target FreeType --config Release 
   
