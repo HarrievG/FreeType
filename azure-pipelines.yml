@@ -13,9 +13,9 @@ steps:
 - task: CMake@1
   inputs:
     cmakeArgs: ..
-- task: CMake@2
+- task: CMake@1
   inputs:
-    cmakeArgs: --build . --target FreeType --config Release 
+    cmakeArgs: '--build . --target FreeType --config Release'
   
 #- script: |
 #    echo Add other tasks to build, test, and deploy your project.
