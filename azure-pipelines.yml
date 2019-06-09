@@ -18,8 +18,7 @@ steps:
     cmakeArgs: ..
 - task: CMake@1
   inputs:
-    configuration: $(BuildConfiguration)
-    cmakeArgs: '--build . --target FreeType --config $(configuration)'
+    cmakeArgs: '--build . --target FreeType --config $(BuildConfiguration)'
   
 #- script: |
 #    echo Add other tasks to build, test, and deploy your project.
