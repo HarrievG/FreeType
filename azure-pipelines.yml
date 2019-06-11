@@ -27,8 +27,8 @@ steps:
     @echo on    
     cd $(Build.ArtifactStagingDirectory)
     cmake $(Build.SourcesDirectory)
-    cmake --build $(Build.SourcesDirectory) --target FreeType --config release
-    cmake --build $(Build.SourcesDirectory) --target FreeType --config debug
+    cmake --build . --target FreeType --config release
+    cmake --build . --target FreeType --config debug
     dir
   displayName: 'Cmake Build'
 - task: PublishBuildArtifacts@1
