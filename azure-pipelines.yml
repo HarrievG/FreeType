@@ -24,11 +24,11 @@ steps:
 #    cmakeArgs: '--build . --target FreeType --config debug'
 
 - script: |
-    @echo on
-    cd $(Build.ArtifactStagingDirectory)
+    @echo on    
     cmake $(Build.SourcesDirectory)
-    cmake --build ($Build.SourcesDirectory) --target FreeType --config release
-    cmake --build ($Build.SourcesDirectory) --target FreeType --config debug
+    cd $(Build.ArtifactStagingDirectory)
+    cmake --build $(Build.SourcesDirectory) --target FreeType --config release
+    cmake --build $(Build.SourcesDirectory) --target FreeType --config debug
     dir
   displayName: 'Cmake Build'
 - task: PublishBuildArtifacts@1
