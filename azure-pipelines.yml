@@ -16,11 +16,17 @@ steps:
 - task: CMake@1
   inputs:
     cmakeArgs: ..
-- task: CMake@1
+- task: CMake@2
   inputs:
-    config: $(BuildConfiguration)
-    cmakeArgs: '--build . --target FreeType --config $(BuildConfiguration)'
-  
+    cmakeArgs: '--build . --target FreeType --config release'
+- task: CMake@2
+  inputs:
+    cmakeArgs: '--build . --target FreeType --config debug'
+- task: PublishBuildArtifacts@3
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 #- script: |
 #    echo Add other tasks to build, test, and deploy your project.
 #    echo See https://aka.ms/yaml
