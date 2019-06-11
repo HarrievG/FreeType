@@ -24,7 +24,9 @@ steps:
 #    cmakeArgs: '--build . --target FreeType --config debug'
 
 - script: |
-    cd '$(Build.ArtifactStagingDirectory)'
+    @echo on
+    cd $(Build.ArtifactStagingDirectory)
+    dir
     cmake ..
     cmake --build . --target FreeType --config release
     cmake --build . --target FreeType --config debug
