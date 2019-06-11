@@ -26,10 +26,10 @@ steps:
 - script: |
     @echo on
     cd $(Build.ArtifactStagingDirectory)
+    cmake $(Build.ArtifactStagingDirectory)
+    cmake --build ($Build.SourcesDirectory) --target FreeType --config release
+    cmake --build ($Build.SourcesDirectory) --target FreeType --config debug
     dir
-    cmake ..
-    cmake --build . --target FreeType --config release
-    cmake --build . --target FreeType --config debug
   displayName: 'Cmake Build'
 - task: PublishBuildArtifacts@1
   inputs:
