@@ -16,13 +16,13 @@ steps:
 - task: CMake@1
   inputs:
     cmakeArgs: ..
-- task: CMake@2
+- task: CMake@1
   inputs:
     cmakeArgs: '--build . --target FreeType --config release'
-- task: CMake@2
+- task: CMake@1
   inputs:
     cmakeArgs: '--build . --target FreeType --config debug'
-- task: PublishBuildArtifacts@3
+- task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
