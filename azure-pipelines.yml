@@ -13,6 +13,7 @@ variables:
   BuildConfiguration: 'Release'
 
 steps:
+# not using tasks,just scripting it. easier to work with working directory
 #- task: CMake@1
 #  inputs:
 #    cmakeArgs: ..
@@ -22,7 +23,6 @@ steps:
 #- task: CMake@1
 #  inputs:
 #    cmakeArgs: '--build . --target FreeType --config debug'
-
 - script: |
     @echo on    
     cd $(Build.ArtifactStagingDirectory)
@@ -34,10 +34,10 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Release'
-    ArtifactName: 'drop'
+    ArtifactName: 'FreeType_Release'
     publishLocation: 'Container'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Debug'
-    ArtifactName: 'drop'
+    ArtifactName: 'FreeType_Debug'
     publishLocation: 'Container'
